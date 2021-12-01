@@ -46,3 +46,16 @@ togglbutton.render('#pull-request-header:not(.toggl)', {}, function (elem) {
 
   $(parentToAppendTo).appendChild(link);
 });
+
+togglbutton.render('#pull-request-details:not(.toggl)', {}, function (elem) {
+  const title = $('#expanderId-4 > div > div > div > a > div:nth-child(1) > div').innerText;
+  const jiraTaskId = $('#expanderId-4 > div > div > div > a > div > div > span').innerText;
+  const description = jiraTaskId + ' ' + title;
+
+  const link = togglbutton.createTimerLink({
+    className: 'bitbucket',
+    description: description
+  });
+
+  $('ol').parentElement.appendChild(link);
+});

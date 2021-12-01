@@ -55,7 +55,7 @@ export default {
     file: 'basecamp.js'
   },
   'bitbucket.org': {
-    url: '*://*.bitbucket.org/*',
+    url: '*://bitbucket.org/*',
     name: 'Bitbucket'
   },
   'bitrix24.com': {
